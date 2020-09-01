@@ -1,0 +1,12 @@
+This is about me:
+Anmol Gill
+Preferred name is Anmol (pronounced "Anne-mall").
+SJSU ID: 013066287
+Major is Applied Math
+anmol.gill@sjsu.edu is my preferred email
+Undergraduate
+Not a graduating senior
+Not repeating this class
+I have taken CS 46A and CS46B.
+No additional information.
+I would like to have the topic Message Passing covered.
