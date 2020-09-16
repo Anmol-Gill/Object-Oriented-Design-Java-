@@ -1,0 +1,46 @@
+Excersice 2:
+
+The main difference between primitive data type int and class Integer
+is that int is a data type of the Integer wrapper class. Therefore, int is
+not as flexible because we can only store a binary value in it. On the other
+hand, class Integer is more flexible because you can add methods to it and thus 
+manipulate the int data type to any data type by casting it be any other data type
+like float or double. The class Integer is of more advantage due to the fact that 
+data can be manipulated while primitive data type int is useful when we want an 
+integer to keep is data type and not change.
+
+For primitive data type int, you can use:
+BYTES
+MAX_VALUE
+MIN_VALUE
+SIZE
+
+Or class Integer, you can use:
+TYPE
+decode()
+doubleValue()
+getInteger()
+valueOf()
+bitCount()
+compare()
+compareUnsigned()
+divideUnsigned()
+hashcode()
+highestOneBit()
+intValue()
+sum()
+signum()
+rotateRight()
+rotateLeft()
+reverseBytes()
+reverse()
+remainderUnsigned()
+parseUnsignedInt()
+parseInt()
+numberOfTrailingZeros()
+numberOfLeadingZeros()
+min()
+max()
+lowestOneBite()
+
+
