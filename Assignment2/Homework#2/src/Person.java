@@ -11,9 +11,16 @@ public class Person {
 	private float weight;
 	Scanner scan = new Scanner(System.in);
 	
-	public Person() 
-	{
-		introduce();
+	public Person(String firstName, String lastName, int age, String socialSN, String address, String gender, float weight) 
+	{	
+		//introduce():
+		this.firstName = firstName;	
+		this.lastName = lastName;	
+		this.age=age;
+		this.socialSN = socialSN;
+		this.address = address;
+		this.gender = gender;
+		this.weight = weight;
 	}
 
 	public void setFirstName(String firstName) 
@@ -82,8 +89,9 @@ public class Person {
 	}
 	
 	@Override
-    public String toString() { 
-		StringBuilder sb = new StringBuilder();
+    public String toString() 
+    { 
+	StringBuilder sb = new StringBuilder();
         sb.append("First name : ").append(this.firstName).append("\n");
         sb.append("Last name : ").append(this.lastName).append("\n");
         sb.append("Age : ").append(this.age).append("\n");
@@ -96,22 +104,8 @@ public class Person {
 	
 	void introduce()
 	{
-		firstName = scan.next();
-		lastName = scan.next();
-		age = scan.nextInt();
-		socialSN = scan.next();
-		scan.nextLine();
-		address = scan.nextLine();
-		gender = scan.next();
-		weight = scan.nextFloat();
-		System.out.println(getName() + ", " + getAge() + "years old, " + getSocialSN()
-		+ ", " + getAddress() + ", " + getGender() + ", " + getWeight());
+		System.out.println(getName() + ", " + getAge() + " years old, SNN: " + getSocialSN()
+		+ ", Address: " + getAddress() + ", Gender: " + getGender() + ", Weight: " + getWeight());
 	}
-	
-	public static void main(String[] args) 
-	{
-		Person myObj = new Person(); 
-	    System.out.println(myObj.toString());
-	}
-	
 }
+
