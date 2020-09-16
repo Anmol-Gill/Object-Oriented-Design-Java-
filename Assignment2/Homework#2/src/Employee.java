@@ -4,13 +4,16 @@ public class Employee extends Person{
 
 	private int employeeID;
 	private String employeeStatus;
-	private double payAmount;
+	private int payAmount;
 	Scanner scan = new Scanner(System.in);
+	private int workHours;
+	private int rate;
+	private int salary;
+	private int weeks;
 	
-	public Employee () 
+	public Employee (int employeeID, String employeeStatus, double payAmount) 
 	{
-		calculatePay();
-		getPayAmount();
+		super("", "", 0, "", "", "", 0);
 	}
 	
 	public void setEmployeeID(int employeeID)
@@ -23,9 +26,29 @@ public class Employee extends Person{
 		this.employeeStatus = employeeStatus;
 	}
 	
-	public void setPayAmount(double payAmount)
+	public void setPayAmount(int payAmount)
 	{
 		this.payAmount = payAmount;
+	}
+	
+	public void setWorkHours(int workHours)
+	{
+		this.workHours = workHours;
+	}
+	
+	public void setRate(int rate)
+	{
+		this.rate = rate;
+	}
+	
+	public void setSalary(int salary)
+	{
+		this.salary = salary;
+	}
+	
+	public void setWeeks(int weeks)
+	{
+		this.weeks = weeks;
 	}
 	
 	public int getEmployeeID()
@@ -38,34 +61,55 @@ public class Employee extends Person{
 		return employeeStatus;
 	}
 	
-	public double getPayAmount()
+	public int getPayAmount()
 	{
 		return payAmount;
 	}
 	
-	public double calculatePay()
+	public int getWorkHours()
+	{
+		return workHours;
+	}
+	
+	public double getRate()
+	{
+		return rate;
+	}
+	
+	public double getSalary() 
+	{
+		return salary;
+	}
+	
+	public int getWeeks()
+	{
+		return weeks;
+	}
+	
+	public double calculatePay(int salary, int weeks)
 	{
 		System.out.println("Type of employee: ");	
 		employeeStatus = scan.next();
-		int workHours;
-		double rate;
-		double salary;
-		int weeks;
+		int workHours= 0;
+		int rate = 0;
 		if (employeeStatus == "part time" || employeeStatus == "contractor")
 			{
-				scan.next();
-				System.out.println("hours of work: ");
-				workHours = scan.nextInt();
-				System.out.println("rate/hr: ");
-				rate = scan.nextDouble(); 
-				payAmount = workHours*rate;
+				partTime(workHours, rate);
 			}
 		else if (employeeStatus == "full time")
 			{
-				salary = scan.nextDouble();
-				weeks = scan.nextInt();
-				payAmount = (salary/52)*weeks;
+				fullTime(salary, weeks);
 			}
 		return payAmount;
+	}
+	
+	void partTime(int workHours, int rate)
+	{
+		payAmount = (workHours*rate);
+	}
+	
+	void fullTime(int salary, int weeks)
+	{
+		payAmount = ((salary/52)*weeks);
 	}
 }
