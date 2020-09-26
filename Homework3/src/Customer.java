@@ -40,15 +40,10 @@ public class Customer extends Person {
 	public void introduce() {
 		System.out.println("Name: " + this.getFirstName() + " " + this.getLastName());
 		System.out.println("Age: " + this.getAge());
-		System.out.println("Address: " + this.getAddress());
 	}
 
 	public void makePayment() {
 		System.out.println("Make payment in check/cash.");
 	}
 
-	public Address setAddress(int i, String string, String string2, String string3, String string4) {
-		return getAddress();
-
-	}
 }

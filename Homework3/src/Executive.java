@@ -36,10 +36,13 @@ public class Executive extends Employee {
 	}
 
 	public void introduce(boolean displaySSN) {
-		displaySSN = true;
+		displaySSN = false;
+			System.out.println("Name: " + this.getFirstName() + " " + this.getLastName());
+			System.out.println("Age: " + this.getAge() + " ");	
+			System.out.println("Employee ID: " + this.getID() + " ");	
 	}
 
-	public double computerPay() {
+	public double computePay() {
 		return yearlyBonus + yearlyCompensation;
 	}
 }

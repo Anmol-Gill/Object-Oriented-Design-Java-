@@ -28,11 +28,13 @@ public class FullTimeHourly extends FullTimeEmployee {
 
 	public void introduce(boolean displaySSN) {
 		if (displaySSN = true) {
-			System.out.println(getFirstName());
+			System.out.println("Name: " +getFirstName()+ " " + getLastName());
+			System.out.println("Age: " + getAge());	
+			System.out.println("Employee ID: " + this.getID() + " ");	
 		}
 	}
 
 	public double computePay(int numHrs) {
-		return numHrs * overtimePay;
+		return numHrs * overtimePay + getBasePay();
 	}
 }

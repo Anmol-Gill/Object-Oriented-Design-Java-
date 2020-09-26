@@ -17,6 +17,9 @@ public class FullTimeSalaried extends FullTimeEmployee {
 
 	public void introduce(boolean displaySSN) {
 		displaySSN = true;
+		System.out.println("Name: " + this.getFirstName() + " " + this.getLastName());
+		System.out.println("Age: " + this.getAge());
+		System.out.println("Employee ID: " + this.getID());
 	}
 
 	public double computePay(int numWeeks) {

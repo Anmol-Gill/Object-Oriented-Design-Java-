@@ -27,6 +27,9 @@ public class Contractor extends Employee {
 
 	public void introduce(boolean displaySSN) {
 		displaySSN = true;
+		System.out.println("Name: " +getFirstName()+ " " + getLastName());
+		System.out.println("Age: " + getAge());	
+		System.out.println("Employee ID: " + getID());	
 	}
 
 	public double computePay(int numHrs) {
