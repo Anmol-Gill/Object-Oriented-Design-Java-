@@ -1,0 +1,7 @@
+This is the command_line file
+It will run until
+the 
+quit 
+command
+@q
+it will have ended above  
