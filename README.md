@@ -1,1 +1,1 @@
-# SJSU_CS151_F2020
+# Object-Oriented-Design Java
